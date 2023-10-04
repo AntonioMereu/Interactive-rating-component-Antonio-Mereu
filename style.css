@@ -1,6 +1,7 @@
 :root {
   /* Primary */
   --orange: hsl(25, 97%, 53%);
+  --warning: rgb(236, 64, 64);
 
   /* Neutral */
   --White: hsl(0, 0%, 100%);
@@ -39,7 +40,7 @@ main {
     var(--gradient-2) 0%,
     var(--gradient-1) 90%
   );
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .rating-card {
@@ -60,7 +61,7 @@ main {
 .rating-card p {
   color: var(--light-grey);
   font-size: 0.9rem;
-  line-height: 1.25rem;
+  line-height: 1.3rem;
 }
 
 .rating {
@@ -74,7 +75,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--light-grey);
+  color: var(--medium-grey);
   background-color: var(--button);
   padding: 12px;
   border-radius: 100px;
@@ -99,7 +100,19 @@ main {
   color: white;
 }
 
-.rating-card button {
+.warning {
+    display: none;
+    margin-block-start: 20px;
+}
+
+.warning p {
+    color: var(--warning);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+}
+
+button {
   background-color: var(--orange);
   border: none;
   width: 100%;
@@ -128,29 +141,29 @@ main {
 }
 
 .thanks-card img {
-    width: 150px;
-    margin-block: 12px;
+  width: 150px;
+  margin-block: 12px;
 }
 
 .thanks-card p:first-of-type {
-    color: var(--orange);
-    font-size: .9rem;
-    background-color: var(--button);
-    padding: 7px 12px;
-    border-radius: 100px;
-    margin-block: 12px;
+  color: var(--orange);
+  font-size: 0.9rem;
+  background-color: var(--button);
+  padding: 7px 12px;
+  border-radius: 100px;
+  margin-block: 12px;
 }
 
 .thanks-card h2 {
-    margin-block: 14px 12px;
-    color: var(--White);
-    font-weight: 600;
+  margin-block: 14px 12px;
+  color: var(--White);
+  font-weight: 600;
 }
 
 .thanks-card p:last-of-type {
-    margin-block: 0 20px;
-    font-size: .85rem;
-    line-height: 1.35rem;
+  margin-block: 0 20px;
+  font-size: 0.85rem;
+  line-height: 1.35rem;
 }
 
 footer {
@@ -164,4 +177,39 @@ footer {
 
 footer a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 35em) {
+  .card-container {
+    width: 412px;
+    padding: 30px;
+  }
+
+  .rating-card img {
+    padding: 15px;
+  }
+
+  .rating-card h2 {
+    margin-block-start: 26px;
+  }
+
+  .rating-card p {
+    font-size: 0.95rem;
+    line-height: 1.45rem;
+  }
+
+  .rating span {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  button {
+    margin-block: 18px 0;
+    font-size: .9rem;
+  }
+
+  .thanks-card p:last-of-type {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
