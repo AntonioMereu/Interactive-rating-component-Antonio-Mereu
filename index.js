@@ -1,5 +1,6 @@
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const submit = document.querySelector('button');
+const refresh = document.querySelector('.return-btn');
 
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', function () {
@@ -28,3 +29,7 @@ checkboxes.forEach(checkbox => {
         }
     });
 });
+
+refresh.addEventListener('click', () => {
+    location.reload();
+})

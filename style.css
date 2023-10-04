@@ -18,6 +18,21 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+button,
+textarea,
+input,
+select,
+span,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
   margin: 0;
 }
@@ -27,6 +42,7 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--very-dark-blue);
 }
 
@@ -98,21 +114,22 @@ main {
 .rating input:checked ~ span {
   background-color: var(--orange);
   color: white;
+  border-radius: 100px;
 }
 
 .warning {
-    display: none;
-    margin-block-start: 20px;
+  display: none;
+  margin-block-start: 20px;
 }
 
 .warning p {
-    color: var(--warning);
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: .05rem;
+  color: var(--warning);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 
-button {
+.submit-btn {
   background-color: var(--orange);
   border: none;
   width: 100%;
@@ -126,7 +143,7 @@ button {
   cursor: pointer;
 }
 
-.rating-card button:hover {
+.rating-card .submit-btn:hover {
   background-color: var(--White);
   color: var(--orange);
 }
@@ -166,6 +183,22 @@ button {
   line-height: 1.35rem;
 }
 
+.return-btn {
+  border-radius: 100px;
+  width: 43px;
+  aspect-ratio: 1 / 1;
+  border: none;
+  background-color: var(--orange);
+  color: white;
+  margin-block: 10px;
+  cursor: pointer;
+}
+
+.return-btn:hover {
+    color: var(--orange);
+    background-color: var(--White);
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -173,10 +206,11 @@ footer {
   width: 100%;
   font-size: 11px;
   text-align: center;
+  color: var(--light-grey);
 }
 
 footer a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(25, 81%, 56%);
 }
 
 @media (min-width: 35em) {
@@ -203,13 +237,21 @@ footer a {
     padding: 15px;
   }
 
-  button {
+  .sumbit-btn {
     margin-block: 18px 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .thanks-card p:last-of-type {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .return-btn {
+    width: 48px;
+  }
+
+  footer {
+    font-size: 13px;
   }
 }
