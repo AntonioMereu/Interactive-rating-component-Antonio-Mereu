@@ -120,6 +120,37 @@ main {
 
 .thanks-card {
   display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: var(--light-grey);
+}
+
+.thanks-card img {
+    width: 150px;
+    margin-block: 12px;
+}
+
+.thanks-card p:first-of-type {
+    color: var(--orange);
+    font-size: .9rem;
+    background-color: var(--button);
+    padding: 7px 12px;
+    border-radius: 100px;
+    margin-block: 12px;
+}
+
+.thanks-card h2 {
+    margin-block: 14px 12px;
+    color: var(--White);
+    font-weight: 600;
+}
+
+.thanks-card p:last-of-type {
+    margin-block: 0 20px;
+    font-size: .85rem;
+    line-height: 1.35rem;
 }
 
 footer {
