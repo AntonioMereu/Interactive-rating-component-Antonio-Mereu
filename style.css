@@ -1,0 +1,32 @@
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-block-end: 10px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
